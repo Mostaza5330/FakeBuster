@@ -30,7 +30,7 @@ body {
   font-weight: 300;
 }
 
-/* Estilos para el encabezado (header) */
+/* Encabezado */
 header {
   padding: 2rem 5%;
   display: flex;
@@ -46,7 +46,7 @@ header {
   color: #ffffff;
 }
 
-/* Sección Hero: presentación principal */
+/* Sección Hero */
 .hero {
   height: 500px;
   display: flex;
@@ -77,14 +77,14 @@ header {
   margin-bottom: 2rem;
 }
 
-/* Contenedor principal para el contenido */
+/* Contenedor principal */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 5%;
 }
 
-/* Estilos generales para las secciones */
+/* Secciones generales */
 section {
   margin-bottom: 5rem;
 }
@@ -103,7 +103,7 @@ section p {
   color: var(--color-accent);
 }
 
-/* Estilos para la lista de información */
+/* Lista de información */
 .info-list {
   list-style: none;
 }
@@ -121,7 +121,7 @@ section p {
   color: var(--color-highlight);
 }
 
-/* Sección de Precios: grilla de planes */
+/* Sección de Precios */
 .pricing {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -129,13 +129,15 @@ section p {
 }
 
 .plan {
-  background: var(--color-bg);
+  background: #ffffff; /* Fondo blanco para resaltar imagen */
   border: 1px solid var(--color-border);
   border-radius: var(--border-radius);
   padding: 2rem;
   transition: all 0.3s ease;
   text-align: center;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1); /* Sombra más marcada */
 }
+
 
 .plan:hover {
   transform: translateY(-5px);
@@ -143,12 +145,12 @@ section p {
   border-color: var(--color-highlight);
 }
 
-.plan h3 {
-  font-size: 1.5rem;
-  font-weight: 500;
-  margin-bottom: 1rem;
-  color: var(--color-primary);
+.plan h3,
+.plan .price,
+.plan ul li {
+  color: var(--color-text); /* Asegura buen contraste con fondo blanco */
 }
+
 
 .plan .price {
   font-size: 2.5rem;
@@ -176,7 +178,7 @@ section p {
   color: var(--color-highlight);
 }
 
-/* Estilos para los botones */
+/* Botones */
 .btn {
   display: inline-block;
   background: var(--color-highlight);
@@ -202,7 +204,7 @@ section p {
   margin-top: 1.5rem;
 }
 
-/* Estilos para los componentes tipo tarjeta */
+/* Tarjetas */
 .card {
   background: var(--color-bg);
   border-radius: var(--border-radius);
@@ -211,12 +213,22 @@ section p {
   box-shadow: var(--box-shadow);
 }
 
-/* Sección Descarga: puede tener estilos adicionales si se desea */
-#descarga .card {
-  text-align: center;
+/* Imagenes en los planes */
+.plan-img {
+  width: 100%;
+  max-width: 150px;
+  margin: 0 auto 1rem auto;
+  display: block;
 }
 
-/* Estilos para el pie de página (footer) */
+/* Sección Testimonios */
+#testimonios .card {
+  margin-bottom: 2rem;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Pie de página */
 footer {
   padding: 3rem 5%;
   text-align: center;
@@ -244,12 +256,12 @@ footer a:hover {
   color: #ffffff;
 }
 
-/* Clase para resaltar textos */
+/* Resaltar textos */
 .highlight-text {
   color: var(--color-highlight);
 }
 
-/* Ajustes para dispositivos móviles */
+/* Responsive */
 @media (max-width: 768px) {
   .hero {
     height: 400px;
