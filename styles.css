@@ -1,0 +1,261 @@
+/* Importación de la fuente 'Inter' desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+/* Variables de diseño: colores, sombras y border-radius */
+:root {
+  --color-bg: #F1EBDF; /* Fondo actualizado */
+  --color-text: #15263e;
+  --color-accent: #274060;
+  --color-primary: #15263e;
+  --color-secondary: #f6f6f6;
+  --color-highlight: #ffc947;
+  --color-border: #e8e8e8;
+  --box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+  --border-radius: 12px;
+}
+
+/* Reset general para márgenes y paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos básicos para el cuerpo de la página */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+/* Estilos para el encabezado (header) */
+header {
+  padding: 2rem 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-primary);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+}
+
+/* Sección Hero: presentación principal */
+.hero {
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  padding: 0 5%;
+  margin-bottom: 4rem;
+}
+
+.hero-content {
+  max-width: 700px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.5px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #ffffff;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+/* Contenedor principal para el contenido */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+/* Estilos generales para las secciones */
+section {
+  margin-bottom: 5rem;
+}
+
+section h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.5px;
+  color: var(--color-primary);
+  text-align: center;
+}
+
+section p {
+  margin-bottom: 1.5rem;
+  color: var(--color-accent);
+}
+
+/* Estilos para la lista de información */
+.info-list {
+  list-style: none;
+}
+
+.info-list li {
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.info-list li:before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--color-highlight);
+}
+
+/* Sección de Precios: grilla de planes */
+.pricing {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.plan {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.plan:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--box-shadow);
+  border-color: var(--color-highlight);
+}
+
+.plan h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+
+.plan .price {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: var(--color-accent);
+  margin: 1.5rem 0;
+}
+
+.plan ul {
+  list-style: none;
+  margin: 1.5rem 0;
+  text-align: left;
+}
+
+.plan ul li {
+  margin-bottom: 0.75rem;
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.plan ul li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--color-highlight);
+}
+
+/* Estilos para los botones */
+.btn {
+  display: inline-block;
+  background: var(--color-highlight);
+  color: var(--color-primary);
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.btn:hover {
+  background: #ffb917;
+  transform: translateY(-2px);
+}
+
+.btn-container {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+/* Estilos para los componentes tipo tarjeta */
+.card {
+  background: var(--color-bg);
+  border-radius: var(--border-radius);
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--box-shadow);
+}
+
+/* Sección Descarga: puede tener estilos adicionales si se desea */
+#descarga .card {
+  text-align: center;
+}
+
+/* Estilos para el pie de página (footer) */
+footer {
+  padding: 3rem 5%;
+  text-align: center;
+  border-top: 1px solid var(--color-border);
+  margin-top: 4rem;
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+footer p {
+  color: #ffffff;
+  opacity: 0.9;
+  font-size: 0.9rem;
+  margin: 0.75rem 0;
+}
+
+footer a {
+  color: var(--color-highlight);
+  text-decoration: none;
+  margin: 0 0.75rem;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ffffff;
+}
+
+/* Clase para resaltar textos */
+.highlight-text {
+  color: var(--color-highlight);
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
+  .hero {
+    height: 400px;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
