@@ -204,6 +204,17 @@ section p {
   margin-top: 1.5rem;
 }
 
+/* Estilo para el botón de demo */
+.demo-btn {
+    font-weight: 600;
+    text-transform: uppercase;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.demo-btn:hover {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
 /* Tarjetas */
 .card {
   background: var(--color-bg);

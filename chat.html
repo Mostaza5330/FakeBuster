@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FakeBuster - Chat</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="stylesChat.css">
+</head>
+<body class="font-['Inter']">
+    <div class="min-h-screen theme-background">
+        <!-- Header -->
+        <header class="fixed top-0 left-0 right-0 theme-header shadow-sm z-10">
+            <div class="max-w-2xl mx-auto px-4 py-3 flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <a href="/" class="flex items-center space-x-3">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNDAgMEMyNy44NSAwIDE3LjUgMTAuMzUgMTcuNSAyMi41VjI3LjVIMTIuNUM1LjYgMjcuNSAwIDMzLjEgMCA0MFY2Ny41QzAgNzQuNCA1LjYgODAgMTIuNSA4MEg2Ny41Qzc0LjQgODAgODAgNzQuNCA4MCA2Ny41VjQwQzgwIDMzLjEgNzQuNCAyNy41IDY3LjUgMjcuNUg2Mi41VjIyLjVDNjIuNSAxMC4zNSA1Mi4xNSAwIDQwIDBaTTQwIDVDNDkuNCA1IDU3LjUgMTMuMSA1Ny41IDIyLjVWMjcuNUgyMi41VjIyLjVDMjIuNSAxMy4xIDMwLjYgNSA0MCA1Wk02Ny41IDMyLjVDNzEuNiAzMi41IDc1IDM1LjkgNzUgNDBWNjcuNUM3NSA3MS42IDcxLjYgNzUgNjcuNSA3NUgxMi41QzguNCA3NSA1IDcxLjYgNSA2Ny41VjQwQzUgMzUuOSA4LjQgMzIuNSAxMi41IDMyLjVINjcuNVoiIGZpbGw9IiNGRjRCNEIiLz48L3N2Zz4=" alt="FakeBuster" class="w-8 h-8">
+                        <span class="text-lg font-semibold theme-text">FakeBuster</span>
+                    </a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <span class="text-sm theme-text-secondary">10 consultas restantes</span>
+                    <button class="theme-toggle w-8 h-8 rounded-full flex items-center justify-center transition-transform hover:scale-110">
+                        <i class="fas fa-moon dark-icon hidden"></i>
+                        <i class="fas fa-sun light-icon text-yellow-500"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Chat Container -->
+        <div class="max-w-2xl mx-auto pt-16 pb-24">
+            <div class="chat-container px-4 py-6">
+                <!-- System Message -->
+                <div class="message message-received mb-4">
+                    <p>¡Hola! Soy FakeBuster, tu asistente para detectar noticias falsas. ¿En qué puedo ayudarte hoy?</p>
+                </div>
+
+                <!-- User Message -->
+                <div class="message message-sent mb-4">
+                    <p>¿Esta noticia sobre el cambio climático es verdadera?</p>
+                </div>
+
+                <!-- System Response -->
+                <div class="message message-received">
+                    <p>Analizando el contenido proporcionado...</p>
+                    <div class="mt-2 flex items-center space-x-2">
+                        <div class="w-2 h-2 bg-gray-400 rounded-full animate-pulse"></div>
+                        <div class="w-2 h-2 bg-gray-400 rounded-full animate-pulse delay-100"></div>
+                        <div class="w-2 h-2 bg-gray-400 rounded-full animate-pulse delay-200"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Input Area -->
+        <div class="fixed bottom-0 left-0 right-0 theme-footer border-t theme-border">
+            <div class="max-w-2xl mx-auto px-4 py-4">
+                <form class="flex items-center gap-3" onsubmit="return false;">
+                    <input type="text" 
+                           class="chat-input flex-1 px-4 py-3 rounded-full theme-input border theme-border text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#FF4B4B] focus:border-transparent transition-shadow" 
+                           placeholder="Escribe aquí para iniciar el análisis...">
+                    <button type="submit" class="send-button w-12 h-12 bg-[#FF4B4B] hover:bg-[#ff3333] rounded-full flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#FF4B4B]">
+                        <i class="fas fa-paper-plane text-white"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="scriptChat.js"></script>
+</body>
+</html>

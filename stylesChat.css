@@ -1,0 +1,343 @@
+/* Light Theme Colors - Paleta de FakeBuster */
+:root {
+    --primary-light: #F8F0DD;      /* Fondo principal - tono crema claro */
+    --secondary-light: #FFFFFF;    /* Fondo secundario - blanco */
+    --text-light: #4A4A4A;         /* Texto principal - gris oscuro */
+    --text-secondary-light: #6E6E6E; /* Texto secundario */
+    --accent-light: #FF4B4B;       /* Color de acento - rojo */
+    --border-light: #E5D9BC;       /* Color de borde - crema más oscuro */
+    --button-light: #F0E6CB;       /* Fondo de botón */
+    --header-light: #FFFFFF;       /* Fondo de encabezado */
+    --footer-light: #F8F0DD;       /* Fondo de pie de página */
+}
+
+/* Dark Theme Colors */
+:root {
+    --primary-dark: #1A1A1A;       /* Base background color for dark mode */
+    --secondary-dark: #2A2A2A;     /* Secondary background color */
+    --text-dark: #F2EADF;          /* Text color */
+    --text-secondary-dark: #AAAAAA; /* Secondary text color */
+    --accent-dark: #FF4B4B;        /* Accent color */
+    --border-dark: #444444;        /* Border color */
+    --button-dark: #3A3A3A;        /* Button background */
+    --header-dark: #2A2A2A;        /* Header background */
+    --footer-dark: #1A1A1A;        /* Footer background */
+}
+
+/* Base styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Theme specific classes */
+.theme-background {
+    background-color: var(--primary-light);
+    transition: background-color 0.3s ease;
+}
+
+.dark-theme .theme-background {
+    background-color: var(--primary-dark);
+}
+
+.theme-header {
+    background-color: var(--header-light);
+    transition: background-color 0.3s ease;
+}
+
+.dark-theme .theme-header {
+    background-color: var(--header-dark);
+}
+
+.theme-footer {
+    background-color: var(--footer-light);
+    transition: background-color 0.3s ease;
+}
+
+.dark-theme .theme-footer {
+    background-color: var(--footer-dark);
+}
+
+.theme-text {
+    color: var(--text-light);
+    transition: color 0.3s ease;
+}
+
+.dark-theme .theme-text {
+    color: var(--text-dark);
+}
+
+.theme-text-secondary {
+    color: var(--text-secondary-light);
+    transition: color 0.3s ease;
+}
+
+.dark-theme .theme-text-secondary {
+    color: var(--text-secondary-dark);
+}
+
+.theme-border {
+    border-color: var(--border-light);
+    transition: border-color 0.3s ease;
+}
+
+.dark-theme .theme-border {
+    border-color: var(--border-dark);
+}
+
+.theme-input {
+    background-color: var(--secondary-light);
+    color: var(--text-light);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-color: var(--border-light);
+}
+
+.dark-theme .theme-input {
+    background-color: var(--secondary-dark);
+    color: var(--text-dark);
+    border-color: var(--border-dark);
+}
+
+.theme-toggle {
+    background-color: var(--button-light);
+    transition: background-color 0.3s ease;
+}
+
+.dark-theme .theme-toggle {
+    background-color: var(--button-dark);
+}
+
+.dark-icon {
+    color: var(--text-dark);
+}
+
+.light-icon {
+    color: #FF9900; /* Tono más cálido para el icono sol */
+}
+
+/* Message bubbles */
+.message {
+    max-width: 80%;
+    margin-bottom: 1rem;
+    padding: 1rem 1.25rem;
+    border-radius: 1rem;
+    line-height: 1.5;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: messageAppear 0.3s ease forwards;
+}
+
+.message-received {
+    background-color: var(--secondary-light);
+    color: var(--text-light);
+    border-top-left-radius: 4px;
+    margin-right: auto;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.dark-theme .message-received {
+    background-color: var(--secondary-dark);
+    color: var(--text-dark);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.message-sent {
+    background-color: var(--accent-light);
+    color: white;
+    border-top-right-radius: 4px;
+    margin-left: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Rest of the CSS remains the same */
+@keyframes messageAppear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Loading dots animation */
+.loading-dots {
+    display: flex;
+    gap: 4px;
+    padding-top: 8px;
+}
+
+.loading-dots div {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #999;
+    animation: dotPulse 1s infinite;
+}
+
+.loading-dots div:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.loading-dots div:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes dotPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.4;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
+
+/* Input styles */
+.chat-input {
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-light);
+}
+
+.dark-theme .chat-input {
+    border: 1px solid var(--border-dark);
+}
+
+.chat-input:focus {
+    border-color: var(--accent-light);
+    box-shadow: 0 0 0 2px rgba(255, 75, 75, 0.2);
+}
+
+/* Button styles */
+.send-button {
+    transition: all 0.3s ease;
+}
+
+.send-button:hover {
+    transform: scale(1.05);
+}
+
+.send-button:active {
+    transform: scale(0.95);
+}
+
+/* Theme toggle button */
+.theme-toggle {
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(156, 163, 175, 0.5);
+    border-radius: 3px;
+}
+
+.dark-theme ::-webkit-scrollbar-thumb {
+    background: rgba(156, 163, 175, 0.3);
+}
+
+/* Header animations */
+.header-logo {
+    transition: transform 0.3s ease;
+}
+
+.header-logo:hover {
+    transform: scale(1.05);
+}
+
+/* Plan card styles */
+.plan-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plan-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive design */
+@media (max-width: 640px) {
+    .message {
+        max-width: 90%;
+    }
+
+    .header-content {
+        padding: 0.75rem;
+    }
+}
+
+/* Form validation styles */
+input:invalid {
+    border-color: var(--accent-light);
+}
+
+.error-message {
+    color: var(--accent-light);
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    animation: shake 0.4s ease-in-out;
+}
+
+@keyframes shake {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    75% {
+        transform: translateX(5px);
+    }
+}
